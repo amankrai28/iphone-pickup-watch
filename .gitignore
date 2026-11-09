@@ -1,0 +1,16 @@
+node_modules/
+.wrangler/
+dist/
+.dev.vars
+.env*
+.cloudflare-auth/
+
+.native-runtime/
+native/*.plist
+
+*.zip
+*.log
+.DS_Store
+native/bundle.mjs
+Start_Native_Watch.command
+audit/

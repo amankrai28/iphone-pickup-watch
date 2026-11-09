@@ -1,0 +1,25 @@
+{
+  "name": "iphone-duo-background-watch",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "test:runtime": "node test/runtime.mjs",
+    "test:checkout": "node test/checkout-runtime.mjs",
+    "test:phone": "node test/phone-runtime.mjs",
+    "test:native": "node test/native-runtime.mjs",
+    "native:prepare": "node native/control.mjs prepare",
+    "native:start": "node native/control.mjs start",
+    "native:status": "node native/control.mjs status"
+  },
+  "devDependencies": {
+    "miniflare": "4.20260515.0",
+    "wrangler": "4.92.0"
+  },
+  "dependencies": {
+    "@mmmike/web-push": "1.5.0"
+  }
+}
